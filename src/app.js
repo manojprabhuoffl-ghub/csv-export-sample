@@ -66,6 +66,8 @@ app.post('/expenses', (req, res) => {
   res.status(201).json(row);
 });
 
+app.use(require('./export')(isValidDate));
+
 // --- routes end ---
 
 module.exports = app;
